@@ -5,7 +5,7 @@ Tags: disable, media, thumbnails
 Requires at least: 5.0
 Requires PHP: 8.0
 Tested up to: 6.7
-Stable tag: 2.16
+Stable tag: 2.17
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,9 @@ none
 1. Management screen
 
 == Changelog ==
+
+= [2.17] 2024/11/10 =
+* Fix - Rebuilt javascript.
 
 = [2.16] 2024/04/03 =
 * Fix - Translations.

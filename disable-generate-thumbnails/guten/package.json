@@ -1,6 +1,6 @@
 {
   "name": "disable-generate-thumbnails",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Disable Generate Thumbnails",
   "main": "index.js",
   "scripts": {
@@ -10,12 +10,12 @@
   "author": "Katsushi Kawamori",
   "license": "GPL-2.0-or-later",
   "devDependencies": {
-    "@wordpress/scripts": "27.5.0"
+    "@wordpress/scripts": "30.4.0"
   },
   "dependencies": {
-    "@wordpress/api-fetch": "^6.51.0",
-    "@wordpress/dom-ready": "^3.54.0",
-    "@wordpress/element": "^5.31.0",
-    "@wordpress/i18n": "^4.54.0"
+    "@wordpress/api-fetch": "^7.11.0",
+    "@wordpress/dom-ready": "^4.11.0",
+    "@wordpress/element": "^6.11.0",
+    "@wordpress/i18n": "^5.11.0"
   }
 }
