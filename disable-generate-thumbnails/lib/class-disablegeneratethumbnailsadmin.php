@@ -70,7 +70,7 @@ class DisableGenerateThumbnailsAdmin {
 			$this_plugin = 'disable-generate-thumbnails/disablegeneratethumbnails.php';
 		}
 		if ( $file === $this_plugin ) {
-			$links[] = '<a href="' . admin_url( 'options-general.php?page=disablegeneratethumbnails' ) . '">' . __( 'Settings' ) . '</a>';
+			$links[] = '<a href="' . admin_url( 'options-general.php?page=disablegeneratethumbnails' ) . '">' . __( 'Settings', 'disable-generate-thumbnails' ) . '</a>';
 		}
 			return $links;
 	}
@@ -82,10 +82,15 @@ class DisableGenerateThumbnailsAdmin {
 	 */
 	public function plugin_options() {
 
-		printf(
-			'<div class="wrap" id="disablegeneratethumbnails">%s</div>',
-			esc_html__( 'Loading…', 'disable-generate-thumbnails' )
-		);
+		global $wp_version;
+		$requires = '6.6';
+		if ( version_compare( $wp_version, $requires, '>=' ) ) {
+			$admin_screen = esc_html__( 'Loading…', 'disable-generate-thumbnails' );
+		} else {
+			/* translators: WordPress requires version */
+			$admin_screen = sprintf( esc_html__( 'WordPress %s or higher is required to view this screen.', 'disable-generate-thumbnails' ), $requires );
+		}
+		printf( '<div class="wrap" id="disablegeneratethumbnails">%s</div>', esc_html( $admin_screen ) );
 	}
 
 	/** ==================================================
@@ -272,20 +277,20 @@ class DisableGenerateThumbnailsAdmin {
 			'credit',
 			array(
 				'links'          => __( 'Various links of this plugin', 'disable-generate-thumbnails' ),
-				'plugin_version' => __( 'Version:' ) . ' ' . $plugin_ver_num,
+				'plugin_version' => __( 'Version:', 'disable-generate-thumbnails' ) . ' ' . $plugin_ver_num,
 				/* translators: FAQ Link & Slug */
 				'faq'            => sprintf( __( 'https://wordpress.org/plugins/%s/faq', 'disable-generate-thumbnails' ), $slug ),
 				'support'        => 'https://wordpress.org/support/plugin/' . $slug,
 				'review'         => 'https://wordpress.org/support/view/plugin-reviews/' . $slug,
 				'translate'      => 'https://translate.wordpress.org/projects/wp-plugins/' . $slug,
 				/* translators: Plugin translation link */
-				'translate_text' => sprintf( __( 'Translations for %s' ), $plugin_name ),
+				'translate_text' => sprintf( __( 'Translations for %s', 'disable-generate-thumbnails' ), $plugin_name ),
 				'facebook'       => 'https://www.facebook.com/katsushikawamori/',
 				'twitter'        => 'https://twitter.com/dodesyo312',
 				'youtube'        => 'https://www.youtube.com/channel/UC5zTLeyROkvZm86OgNRcb_w',
 				'donate'         => __( 'https://shop.riverforest-wp.info/donate/', 'disable-generate-thumbnails' ),
 				'donate_text'    => __( 'Please make a donation if you like my work or would like to further the development of this plugin.', 'disable-generate-thumbnails' ),
-				'donate_button'  => __( 'Donate to this plugin &#187;' ),
+				'donate_button'  => __( 'Donate to this plugin &#187;', 'disable-generate-thumbnails' ),
 			)
 		);
 	}

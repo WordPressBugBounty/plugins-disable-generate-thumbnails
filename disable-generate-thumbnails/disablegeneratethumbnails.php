@@ -3,7 +3,7 @@
  * Plugin Name: Disable Generate Thumbnails
  * Plugin URI:  https://wordpress.org/plugins/disable-generate-thumbnails/
  * Description: Select the thumbnails and functions to disable it.
- * Version:     2.17
+ * Version:     2.18
  * Author:      Katsushi Kawamori
  * Author URI:  https://riverforest-wp.info/
  * License:     GPLv2 or later

@@ -2,10 +2,10 @@
 Contributors: Katsushi Kawamori
 Donate link: https://shop.riverforest-wp.info/donate/
 Tags: disable, media, thumbnails
-Requires at least: 5.0
+Requires at least: 6.6
 Requires PHP: 8.0
 Tested up to: 6.7
-Stable tag: 2.17
+Stable tag: 2.18
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,9 @@ none
 1. Management screen
 
 == Changelog ==
+
+= [2.18] 2024/11/11 =
+* Fix - Management screen display issue.
 
 = [2.17] 2024/11/10 =
 * Fix - Rebuilt javascript.
