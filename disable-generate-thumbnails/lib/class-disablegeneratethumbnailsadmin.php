@@ -47,7 +47,7 @@ class DisableGenerateThumbnailsAdmin {
 	 */
 	public function plugin_menu() {
 
-		add_options_page(
+		add_media_page(
 			'Disable Generate Thumbnails Options',
 			'Disable Generate Thumbnails',
 			'manage_options',
@@ -101,7 +101,7 @@ class DisableGenerateThumbnailsAdmin {
 	 */
 	public function admin_scripts( $hook_suffix ) {
 
-		if ( 'settings_page_disablegeneratethumbnails' !== $hook_suffix ) {
+		if ( 'media_page_disablegeneratethumbnails' !== $hook_suffix ) {
 			return;
 		}
 

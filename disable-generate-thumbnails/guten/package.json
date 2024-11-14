@@ -1,6 +1,6 @@
 {
   "name": "disable-generate-thumbnails",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Disable Generate Thumbnails",
   "main": "index.js",
   "scripts": {

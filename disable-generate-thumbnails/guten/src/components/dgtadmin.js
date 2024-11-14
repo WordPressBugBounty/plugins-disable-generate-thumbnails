@@ -1,3 +1,4 @@
+import './dgtadmin.css';
 import { __ } from '@wordpress/i18n';
 import { ToggleControl } from '@wordpress/components';
 import apiFetch from '@wordpress/api-fetch';
@@ -33,17 +34,20 @@ const DgtAdmin = () => {
 		( key ) => {
 			if( checkedItems.hasOwnProperty( key ) ) {
 				items.push(
-					<ToggleControl
-						label={ key }
-						checked={ checkedItems[ key ] }
-						onChange={ ( value ) =>
-							{
-								checkedItems[ key ] = value;
-								let data = Object.assign( {}, checkedItems );
-								setCheckedItems( data );
+					<div className="line-margin">
+						<ToggleControl
+							__nextHasNoMarginBottom
+							label={ key }
+							checked={ checkedItems[ key ] }
+							onChange={ ( value ) =>
+								{
+									checkedItems[ key ] = value;
+									let data = Object.assign( {}, checkedItems );
+									setCheckedItems( data );
+								}
 							}
-						}
-					/>
+						/>
+					</div>
 				);
 			}
 		}
@@ -55,17 +59,20 @@ const DgtAdmin = () => {
 		( key2 ) => {
 			if( checkedItems2.hasOwnProperty( key2 ) ) {
 				items2.push(
-					<ToggleControl
-						label={ key2 }
-						checked={ checkedItems2[ key2 ] }
-						onChange={ ( value ) =>
-							{
-								checkedItems2[ key2 ] = value;
-								let data2 = Object.assign( {}, checkedItems2 );
-								setCheckedItems2( data2 );
+					<div className="line-margin">
+						<ToggleControl
+							__nextHasNoMarginBottom
+							label={ key2 }
+							checked={ checkedItems2[ key2 ] }
+							onChange={ ( value ) =>
+								{
+									checkedItems2[ key2 ] = value;
+									let data2 = Object.assign( {}, checkedItems2 );
+									setCheckedItems2( data2 );
+								}
 							}
-						}
-					/>
+						/>
+					</div>
 				);
 			}
 		}

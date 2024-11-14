@@ -1,4 +1,3 @@
-import './index.css';
 import domReady from '@wordpress/dom-ready';
 import { createRoot } from '@wordpress/element';
 import { DgtAdmin } from './components/dgtadmin';
