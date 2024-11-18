@@ -70,7 +70,7 @@ class DisableGenerateThumbnailsAdmin {
 			$this_plugin = 'disable-generate-thumbnails/disablegeneratethumbnails.php';
 		}
 		if ( $file === $this_plugin ) {
-			$links[] = '<a href="' . admin_url( 'options-general.php?page=disablegeneratethumbnails' ) . '">' . __( 'Settings', 'disable-generate-thumbnails' ) . '</a>';
+			$links[] = '<a href="' . admin_url( 'upload.php?page=disablegeneratethumbnails' ) . '">' . __( 'Settings', 'disable-generate-thumbnails' ) . '</a>';
 		}
 			return $links;
 	}
