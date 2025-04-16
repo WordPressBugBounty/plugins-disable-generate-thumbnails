@@ -4,8 +4,8 @@ Donate link: https://shop.riverforest-wp.info/donate/
 Tags: disable, media, thumbnails
 Requires at least: 6.6
 Requires PHP: 8.0
-Tested up to: 6.7
-Stable tag: 2.20
+Tested up to: 6.8
+Stable tag: 2.21
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,9 @@ none
 1. Management screen
 
 == Changelog ==
+
+= [2.21] 2025/04/17 =
+* Fix - Loading the management screen.
 
 = [2.20] 2024/11/18 =
 * Fix - Fixed link to management screen from plugin menu settings.
